@@ -247,6 +247,13 @@ def big_shoe_rebounds
     #binding.pry
 end
 
+def most_points_scored
+  game_hash.each do |key, value|
+    binding.pry
+  
+  end
+
+end
 
 
 
