@@ -200,6 +200,55 @@ def player_numbers(nome_time)
   end
   return numeros
 end
+<<<<<<< HEAD
+=======
+
+def player_stats(nome)
+  game_hash.each do |location, team|
+    #binding.pry
+    team.each do |team_stats, player_stats|
+      #binding.pry
+      if team_stats == :players
+      #binding.pry
+        player_stats.each do |player|
+        #binding.pry
+          if player[:player_name] == nome
+            #binding.pry
+            player.delete(:player_name)
+            return player
+          end
+        end
+      end
+    end
+  end
+end
+
+def big_shoe_rebounds
+  #binding.pry
+  size = []
+  size_name = []
+  size_rebounds = []
+  game_hash.each do |location, team|
+    #binding.pry
+    team.each do |team_stats, player_stats|
+      #binding.pry
+      if team_stats == :players
+        #binding.pry
+        player_stats.each do |num|
+        #binding.pry
+        size.push(num[:shoe])
+        size_name.push(num[:player_name])
+        size_rebounds.push(num[:rebounds])
+        #binding.pry
+        end
+      end
+    end
+  end
+  a = size.index(size.max)
+  return size_rebounds[a]
+    #binding.pry
+end
+>>>>>>> fdc0d95d17e3c543b24ef48a4e34bf47af63579e
 
 def player_stats(nome)
   game_hash.each do |location, team|
