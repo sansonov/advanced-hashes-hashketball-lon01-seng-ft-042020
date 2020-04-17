@@ -222,7 +222,9 @@ def player_stats(nome)
 end
 
 def big_shoe_rebounds
-  #binding.pry
+
+  #original code for the function bellow:
+
   size = []
   size_name = []
   size_rebounds = []
@@ -245,15 +247,90 @@ def big_shoe_rebounds
   a = size.index(size.max)
   return size_rebounds[a]
     #binding.pry
-end
 
-def most_points_scored
-  game_hash.each do |key, value|
-    binding.pry
+#------------------------------------------------------------------------------------------------
+
+  # # This is the bonnus "most_points_scored"
+  # pontos = []
+  # jogador = []
+  # game_hash.each do |key, hash|
+  #   hash.each do |key2, value| 
+  #     if key2 == :players
+  #       value.each do |stats|
+  #       pontos.push(stats[:points])
+  #       jogador.push(stats[:player_name])
+  #       end
+  #     end
+  #   end
+  # end
+  # p = pontos.index(pontos.max)
+  # j = jogador[p]
+  # binding.pry
+
+  # return j
+ 
+
+#------------------------------------------------------------------------------------------------
+
+#   # This is the bonnus "winning_team"
+#   sum = []
+#   array = []
+#   game_hash.each do |key, hash|
+#     hash[:players].each do |x|
+#       sum.push(x[:points])
+#     end
+#   end
+#   array = sum.each_slice(5).to_a
+#   a = array[0].sum
+#   b = array[1].sum
+#   if a > b 
+#     game_hash[:home][:team_name]
+#   else
+#     game_hash[:away][:team_name]
+#   end
+
+#------------------------------------------------------------------------------------------------
+
+# # This is the bonnus "player_with_longest_name"
+
   
-  end
+#   jogador = []
+#   game_hash.each do |key, hash|
+#     hash.each do |key2, value| 
+#       if key2 == :players
+#         value.each do |stats|
+#         jogador.push(stats[:player_name])
+#         end
+#       end
+#     end
+#   end
+#   jogador.max_by {|x| x.length}
+  
+#------------------------------------------------------------------------------------------------
+
+# # This is the bonnus "long_name_steals_a_ton?""
+
+#   jogador = []
+#   ent = []
+#   game_hash.each do |key, hash|
+#     hash.each do |key2, value| 
+#       if key2 == :players
+#         value.each do |stats|
+#         jogador.push(stats[:player_name])
+#         ent.push(stats[:slam_dunks])
+#         end
+#       end
+#     end
+#   end
+#   max_ent = ent.max
+#   max_ent_index = ent.index(ent.max)
+#   long = jogador.max_by {|x| x.length}
+#   long_index = jogador.find_index {|i| i == long}
+
+#   bbb = ent[long_index] == ent[max_ent_index] ? "O maior nome enterrou mais bolas" : "O maior nome nao enterrou mais bolas"
+#   binding.pry
+
+
 
 end
-
-
 
